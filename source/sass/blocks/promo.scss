@@ -11,11 +11,17 @@
 
   &--slide-2 {
     background-color: $color-lavender-latte;
+    display: none;
   }
 
   &--slide-3 {
     background-color: $color-espresso;
+    display: none;
   }
+}
+
+.promo__slider-wrapper {
+  padding: 20px 20px 60px 20px
 }
 
 .promo__new {
@@ -49,4 +55,8 @@
   width: 113px;
   font-size: 16px;
   line-height: 24px;
+}
+
+.promo__toggle-button {
+  display: none;
 }

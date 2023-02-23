@@ -1,3 +1,7 @@
+.menu__navigation {
+  display: none;
+}
+
 .menu__list {
   margin: 0;
   padding: 0;
@@ -7,4 +11,12 @@
 .menu__link {
   text-decoration: none;
   color: $color-base-black;
+}
+
+.menu__link-enter {
+  display: none;
+}
+
+.menu__link-basket {
+  display: none;
 }

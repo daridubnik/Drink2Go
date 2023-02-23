@@ -1,7 +1,32 @@
 .header {
-  padding: 12px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-image {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $tablet-width)  {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.header__identity {
+  display: flex;
+  flex-direction: row;
 }
 
 .header__description {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

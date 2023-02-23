@@ -1,3 +1,60 @@
 .card {
-  color:black;
+  background-color: $color-base-white;
+}
+
+.card__title-link {
+  text-decoration: none;
+  color: $color-base-black;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__button-basket {
+  padding: 8px 20px 8px 46px;
+  width: 141px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.pagination__button {
+  width: 40px;
+  height: 40px;
+  background-color: $color-base-white;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination__item {
+  padding: 8px;
+  background-color: $color-base-white;
+
+  &--current {
+    background-color: $color-lightest-grey;
+  }
+}
+
+.pagination__link {
+  text-decoration: none;
+  color: $color-base-primary;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.pagination__link--current {
+  font-weight: 600;
+  color: $color-base-black;
 }

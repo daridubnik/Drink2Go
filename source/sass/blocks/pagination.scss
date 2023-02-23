@@ -1,3 +1,42 @@
-.pagination {
-  color:black;
+.pagination__item {
+  background-color: inherit;
+}
+
+.pagination__link {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: block;
+  color: $color-base-primary;
+  background-color: $color-base-white;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $color-base-white;
+    background-color: $color-primary-lighter;
+  }
+
+  &:active {
+    color: $color-base-white;
+    background-color: $color-primary-darker;
+  }
+
+  &:disabled {
+    color: $color-base-white;
+    background-color: $color-light-grey;
+  }
+
+  &--current {
+    color: $color-base-black;
+    background-color: $color-lightest-grey;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: $color-base-black;
+    }
+  }
 }

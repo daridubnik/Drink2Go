@@ -1,3 +1,38 @@
-.form {
-  color:black;
+.form__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form__poin-name {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__button {
+  width: 160px;
+  line-height: 24px;
+
+  &--primary {
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+
+  &--secondary {
+    padding: 11px 17px;
+    font-size: 14px;
+  }
+}
+
+.form__sorting {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-base-primary;
 }

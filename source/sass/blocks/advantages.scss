@@ -57,17 +57,6 @@
   margin-bottom: 32px;
   padding-top: 66px;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-left: 72px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 76px;
-    padding-left: 0;
-  }
-
   &--speed {
     background-image: url("../img/background-images/advantages-speed.svg");
     background-repeat: no-repeat;
@@ -86,6 +75,17 @@
   &--eco {
     background-image: url("../img/background-images/advantages-eco.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    padding-left: 0;
   }
 }
 

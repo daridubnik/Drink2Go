@@ -68,10 +68,17 @@
       <div class="promo__wrapper">
         <ul class="promo__list">
           <li class="promo__item promo__item--slide-1">
-            <div class="promo__slider-wrapper">
+            <div class="promo__slider-wrapper container">
               <div class="promo__image-wrapper">
-                <img src="./img/slider/slider-flat-white-mobile.png" width="280" height="280"
-                  alt="Баночка Декафа Флэт Уайт." />
+                <picture>
+                  <source media="(min-width: 1024px)"
+                    srcset="./img/slider/slider-flat-white-desktop.png, ./img/slider/slider-flat-white-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="./img/slider/slider-flat-white-tablet.png, ./img/slider/slider-flat-white-tablet@2x.png 2x">
+                  <img class="promo__image" src="./img/slider/slider-flat-white-mobile.png"
+                    srcset="./img/slider/slider-flat-white-mobile@2x.png 2x" width="280" height="280"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
               </div>
               <div class="promo__description-wrapper">
                 <p class="promo__new">Новинка!</p>
@@ -90,10 +97,17 @@
             </div>
           </li>
           <li class="promo__item promo__item--slide-2">
-            <div class="promo__slider-wrapper">
+            <div class="promo__slider-wrapper container">
               <div class="promo__image-wrapper">
-                <img src="./img/slider/slider-lavender-mobile.png" width="280" height="280"
-                  alt="Баночка Лавандового Латте." />
+                <picture>
+                  <source media="(min-width: 1024px)"
+                    srcset="./img/slider/slider-lavender-desktop.png, ./img/slider/slider-lavender-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="./img/slider/slider-lavender-tablet.png, ./img/slider/slider-lavender-tablet@2x.png 2x">
+                  <img class="promo__image" src="./img/slider/slider-lavender-mobile.png"
+                    srcset="./img/slider/slider-lavender-mobile@2x.png 2x" width="280" height="280"
+                    alt="Баночка Лавандового Латте." />
+                </picture>
               </div>
               <div class="promo__description-wrapper">
                 <p class="promo__new">Новинка!</p>
@@ -112,10 +126,17 @@
             </div>
           </li>
           <li class="promo__item promo__item--slide-3">
-            <div class="promo__slider-wrapper">
+            <div class="promo__slider-wrapper container">
               <div class="promo__image-wrapper">
-                <img src="./img/slider/slider-espresso-mobile.png" width="280" height="280"
-                  alt="Баночка Тройного Эспрессо." />
+                <picture>
+                  <source media="(min-width: 1024px)"
+                    srcset="./img/slider/slider-espresso-desktop.png, ./img/slider/slider-espresso-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="./img/slider/slider-espresso-tablet.png, ./img/slider/slider-espresso-tablet@2x.png 2x">
+                  <img class="promo__image" src="./img/slider/slider-espresso-mobile.png"
+                    srcset="./img/slider/slider-espresso-mobile@2x.png 2x" width="280" height="280"
+                    alt="Баночка Тройного Эспрессо." />
+                </picture>
               </div>
               <div class="promo__description-wrapper">
                 <p class="promo__new">Новинка!</p>
@@ -143,7 +164,7 @@
           </button>
         </div>
         <div class="promo__toggle">
-          <button class="promo__toggle-button" type="button">
+          <button class="promo__toggle-button promo__toggle-button--current" type="button">
             <span class="visually-hidden">Слайд 1</span>
           </button>
           <button class="promo__toggle-button" type="button">

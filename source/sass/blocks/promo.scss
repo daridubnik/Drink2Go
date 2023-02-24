@@ -162,18 +162,53 @@
 }
 
 .promo__switch-button {
+  margin: 0;
+  width: 20px;
   position: absolute;
   top: 0;
   height: 100%;
   cursor: pointer;
   background-color: inherit;
+  border: none;
+  color: $color-base-primary;
 
-  &-prew {
+  @media (min-width: $tablet-width) {
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+
+  &--prew {
     left: 0;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(to right, $color-base-white, $color-white-opacity-zero);
+    }
+
+    &:active {
+      background: linear-gradient(to right, $color-primary-opacity, $color-primary-opacity-zero);
+    }
   }
 
   &--next {
     right: 0;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(to left, $color-base-white, $color-white-opacity-zero);
+    }
+
+    &:active {
+      background: linear-gradient(to left, $color-primary-opacity, $color-primary-opacity-zero);
+    }
+
+    &:disabled {
+      color: $color-base-grey;
+      background: inherit;
+    }
   }
 }
 
@@ -196,6 +231,16 @@
     height: 4px;
     background-color: $color-base-white;
     border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary-opacity;
+    }
+
+    &:active {
+      background-color: $color-base-primary;
+    }
 
     &--current {
       background-color: $color-base-primary;

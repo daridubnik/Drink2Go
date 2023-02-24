@@ -157,9 +157,18 @@
         </ul>
         <div class="promo__switch">
           <button class="promo__switch-button promo__switch-button--prew" type="button">
+            <svg class="promo__arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.72 0 15 1.32 6.57 10 15 18.68 13.72 20 4 10l9.72-10Z" />
+            </svg>
             <span class="visually-hidden">Назад</span>
           </button>
           <button class="promo__switch-button promo__switch-button--next" type="button">
+            <svg class="promo__arrow" width="11" height="20" viewBox="0 0 11 20" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.28 0 0 1.32 8.43 10 0 18.68 1.28 20 11 10 1.28 0Z" />
+            </svg>
             <span class="visually-hidden">Вперед</span>
           </button>
         </div>
@@ -209,237 +218,276 @@
       </ul>
     </section>
     <section class="catalog">
-      <h2 class="catalog__title title">Каталог</h2>
-      <p class="catalog__subtitle subtitle">
-        Каталог кофейных напитков
-      </p>
-      <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form__wrapper">
-          <fieldset class="form__group">
-            <legend class="form__title">Цена</legend>
-            <div class="form__range range">
-              <div class="range__scale">
-                <div class="range__bar">
-                  <button class="range__toggle range__toggle--min" type="button">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="range__toggle range__toggle--max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
-                </div>
+      <div class="container">
+        <h2 class="catalog__title title">Каталог</h2>
+        <p class="catalog__subtitle subtitle">
+          Каталог кофейных напитков
+        </p>
+        <div class="catalog__content">
+          <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__wrapper">
+              <div class="form__filters-wrapper">
+                <fieldset class="form__group">
+                  <legend class="form__title">Цена</legend>
+                  <div class="form__range range">
+                    <div class="range__scale">
+                      <div class="range__bar">
+                        <button class="range__toggle range__toggle--min" type="button">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range__toggle range__toggle--max" type="button">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <label class="visually-hidden form__label">
+                    <input class="form__range-input" type="number" value="0" name="min-price">
+                  </label>
+                  -
+                  <label class="visually-hidden form__label">
+                    <input class="form__range-input" type="number" value="900" name="max-price">
+                  </label>
+                </fieldset>
+                <fieldset class="form__group">
+                  <legend class="form__title">Наличие молока</legend>
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-matter"
+                          checked>
+                        <span class="form__control-mark form__control-mark--radio"></span>
+                        <span class="form__poin-name">Неважно</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="radio" name="milk" value="dairy-milk">
+                        <span class="form__control-mark form__control-mark--radio"></span>
+                        <span class="form__poin-name">Только животное</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="radio" name="milk"
+                          value="non-dairy-milk">
+                        <span class="form__control-mark form__control-mark--radio"></span>
+                        <span class="form__poin-name">Только растительное</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-milk">
+                        <span class="form__control-mark form__control-mark--radio"></span>
+                        <span class="form__poin-name">Без молока</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="form__group">
+                  <legend class="form__title">Страна произрастания</legend>
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="checkbox" name="country" value="brazil"
+                          checked>
+                        <span class="form__control-mark form__control-mark--checkbox"></span>
+                        <span class="form__poin-name">Бразилия</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="checkbox" name="country"
+                          value="ethiopia">
+                        <span class="form__control-mark form__control-mark--checkbox"></span>
+                        <span class="form__poin-name">Эфиопия</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="checkbox" name="country"
+                          value="colombia">
+                        <span class="form__control-mark form__control-mark--checkbox"></span>
+                        <span class="form__poin-name">Колумбия</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="checkbox" name="country"
+                          value="costa-rica">
+                        <span class="form__control-mark form__control-mark--checkbox"></span>
+                        <span class="form__poin-name">Коста-Рика</span>
+                      </label>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <input class="visually-hidden form__control-input" type="checkbox" name="country" value="peru">
+                        <span class="form__control-mark form__control-mark--checkbox"></span>
+                        <span class="form__poin-name">Перу</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
               </div>
+              <div class="form__buttons-wrapper">
+                <button class="form__button form__button--primary button button--primary">Применить фильтр</button>
+                <button class="form__button form__button--secondary button button--secondary">Сбросить фильтр</button>
+              </div>
+              <fieldset class="form__group form__group--sorting">
+                <legend class="form__title">Сортировка:</legend>
+                <select class="form__sorting" aria-label="Сортировка">
+                  <option value="default">по умолчанию</option>
+                  <option value="expensive-first">сначала дорогие</option>
+                  <option value="cheap-first">сначала дешёвые</option>
+                  <option value="high-rating">высокий рейтинг</option>
+                </select>
+              </fieldset>
             </div>
-            <label class="visually-hidden form__label">
-              <input class="form__range-input" type="number" value="0" name="min-price">
-            </label>
-            -
-            <label class="visually-hidden form__label">
-              <input class="form__range-input" type="number" value="900" name="max-price">
-            </label>
-          </fieldset>
-          <fieldset class="form__group">
-            <legend class="form__title">Наличие молока</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-matter" checked>
-                  <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__poin-name">Неважно</span>
-                </label>
+          </form>
+          <ul class="catalog__list">
+            <li class="catalog__item card">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <img class="card__image" src="./img/catalog/catalog-coffee-can-1.png"
+                    srcset="./img/catalog/catalog-coffee-can-1@2x.png 2x" width="130" height="188"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
+              </a>
+              <a class="card__title-link" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price">225₽</span>
+                <a class="card__button-basket button button--primary" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <img class="card__image" src="./img/catalog/catalog-coffee-can-2.png"
+                    srcset="./img/catalog/catalog-coffee-can-2@2x.png 2x" width="130" height="188"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
+              </a>
+              <a class="card__title-link" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price">225₽</span>
+                <a class="card__button-basket button button--primary" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <img class="card__image" src="./img/catalog/catalog-coffee-can-3.png"
+                    srcset="./img/catalog/catalog-coffee-can-3@2x.png 2x" width="130" height="188"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
+              </a>
+              <a class="card__title-link" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price">225₽</span>
+                <a class="card__button-basket button button--primary" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <img class="card__image" src="./img/catalog/catalog-coffee-can-4.png"
+                    srcset="./img/catalog/catalog-coffee-can-4@2x.png 2x" width="130" height="188"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
+              </a>
+              <a class="card__title-link" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price">225₽</span>
+                <a class="card__button-basket button button--primary" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <img class="card__image" src="./img/catalog/catalog-coffee-can-5.png"
+                    srcset="./img/catalog/catalog-coffee-can-5@2x.png 2x" width="130" height="188"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
+              </a>
+              <a class="card__title-link" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price">225₽</span>
+                <a class="card__button-basket button button--primary" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <img class="card__image" src="./img/catalog/catalog-coffee-can-6.png"
+                    srcset="./img/catalog/catalog-coffee-can-6@2x.png 2x" width="130" height="188"
+                    alt="Баночка Декафа Флэт Уайт." />
+                </picture>
+              </a>
+              <a class="card__title-link" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price">225₽</span>
+                <a class="card__button-basket button button--primary" href="#">В корзину</a>
+              </div>
+            </li>
+          </ul>
+          <div class="catalog__pagination pagination">
+            <a class="pagination__button" href="#">
+              <svg class="pagination__arrow" width="10" height="10" viewBox="0 0 10 10" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.8 0 7 1.24 3.38 5 7 8.76 5.8 10 1 5l4.8-5Z" />
+              </svg>
+              <span class="pagination__button-text">Назад</span>
+            </a>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">1</a>
               </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="dairy-milk">
-                  <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__poin-name">Только животное</span>
-                </label>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link pagination__link--current" href="#">2</a>
               </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="non-dairy-milk">
-                  <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__poin-name">Только растительное</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-milk">
-                  <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__poin-name">Без молока</span>
-                </label>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form__group">
-            <legend class="form__title">Страна произрастания</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="brazil"
-                    checked>
-                  <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__poin-name">Бразилия</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="ethiopia">
-                  <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__poin-name">Эфиопия</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="colombia">
-                  <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__poin-name">Колумбия</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="costa-rica">
-                  <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__poin-name">Коста-Рика</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__label">
-                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="peru">
-                  <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__poin-name">Перу</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="form__button form__button--primary button button--primary">Применить фильтр</button>
-          <button class="form__button form__button--secondary button button--secondary">Сбросить фильтр</button>
-          <fieldset class="form__group">
-            <legend class="form__title">Сортировка:</legend>
-            <select class="form__sorting" aria-label="Сортировка">
-              <option value="default">по умолчанию</option>
-              <option value="expensive-first">сначала дорогие</option>
-              <option value="cheap-first">сначала дешёвые</option>
-              <option value="high-rating">высокий рейтинг</option>
-            </select>
-          </fieldset>
+            <a class="pagination__button" href="#">
+              <svg class="pagination__arrow" width="10" height="10" viewBox="0 0 10 10" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.2 0 3 1.24 6.62 5 3 8.76 4.2 10 9 5 4.2 0Z" />
+              </svg>
+              <span class="pagination__button-text">Вперед</span>
+            </a>
+          </div>
         </div>
-      </form>
-      <ul class="catalog__list">
-        <li class="catalog__item card">
-          <a class="card__image-link" href="#">
-            <img class="card__image" src="./img/catalog/catalog-coffee-can-1.png" width="130" height="188"
-              alt="Баночка Декафа Флэт Уайт." />
-          </a>
-          <a class="card__title-link" href="#">
-            <h3 class="card__title">Декаф Флэт Уайт</h3>
-          </a>
-          <p class="card__description">
-            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-          </p>
-          <div class="card__buy">
-            <span class="card__price">225₽</span>
-            <a class="card__button-basket button button--primary" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item card">
-          <a class="card__image-link" href="#">
-            <img class="card__image" src="./img/catalog/catalog-coffee-can-2.png" width="130" height="188"
-              alt="Баночка Декафа Флэт Уайт." />
-          </a>
-          <a class="card__title-link" href="#">
-            <h3 class="card__title">Декаф Флэт Уайт</h3>
-          </a>
-          <p class="card__description">
-            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-          </p>
-          <div class="card__buy">
-            <span class="card__price">225₽</span>
-            <a class="card__button-basket button button--primary" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item card">
-          <a class="card__image-link" href="#">
-            <img class="card__image" src="./img/catalog/catalog-coffee-can-3.png" width="130" height="188"
-              alt="Баночка Декафа Флэт Уайт." />
-          </a>
-          <a class="card__title-link" href="#">
-            <h3 class="card__title">Декаф Флэт Уайт</h3>
-          </a>
-          <p class="card__description">
-            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-          </p>
-          <div class="card__buy">
-            <span class="card__price">225₽</span>
-            <a class="card__button-basket button button--primary" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item card">
-          <a class="card__image-link" href="#">
-            <img class="card__image" src="./img/catalog/catalog-coffee-can-4.png" width="130" height="188"
-              alt="Баночка Декафа Флэт Уайт." />
-          </a>
-          <a class="card__title-link" href="#">
-            <h3 class="card__title">Декаф Флэт Уайт</h3>
-          </a>
-          <p class="card__description">
-            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-          </p>
-          <div class="card__buy">
-            <span class="card__price">225₽</span>
-            <a class="card__button-basket button button--primary" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item card">
-          <a class="card__image-link" href="#">
-            <img class="card__image" src="./img/catalog/catalog-coffee-can-5.png" width="130" height="188"
-              alt="Баночка Декафа Флэт Уайт." />
-          </a>
-          <a class="card__title-link" href="#">
-            <h3 class="card__title">Декаф Флэт Уайт</h3>
-          </a>
-          <p class="card__description">
-            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-          </p>
-          <div class="card__buy">
-            <span class="card__price">225₽</span>
-            <a class="card__button-basket button button--primary" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item card">
-          <a class="card__image-link" href="#">
-            <img class="card__image" src="./img/catalog/catalog-coffee-can-6.png" width="130" height="188"
-              alt="Баночка Декафа Флэт Уайт." />
-          </a>
-          <a class="card__title-link" href="#">
-            <h3 class="card__title">Декаф Флэт Уайт</h3>
-          </a>
-          <p class="card__description">
-            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-          </p>
-          <div class="card__buy">
-            <span class="card__price">225₽</span>
-            <a class="card__button-basket button button--primary" href="#">В корзину</a>
-          </div>
-        </li>
-      </ul>
-      <div class="catalog__pagitanion pagination">
-        <a class="pagination__button" href="#">
-          <span class="visually-hidden">Предыдущая страница.</span>
-        </a>
-        <ul class="pagination__list">
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">1</a>
-          </li>
-          <li class="pagination__item pagination__item--current">
-            <a class="pagination__link pagination__link--current" href="#">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">3</a>
-          </li>
-        </ul>
-        <a class="pagination__button" href="#">
-          <span class="visually-hidden">Следующая страница.</span>
-        </a>
       </div>
     </section>
     <section class="map">
@@ -457,7 +505,7 @@
   <footer class="footer container">
     <div class="footer__about-us-wrapper">
       <div class="footer__image">
-        <img class="footer__logo-image" src="./img/logo/logo-footer.png" width="82" height="36"
+        <img class="footer__logo-image" src="./img/logo/logo-footer.svg" width="82" height="36"
           alt="Логотип Drink2Go." />
       </div>
       <p class="footer__description">

@@ -1,5 +1,27 @@
 .card {
+  padding: 40px 20px 20px 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
   background-color: $color-base-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px 30px;
+    width: 349px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 15px 0 $color-black-opacity;
+    }
+  }
+}
+
+.card__image-link {
+  margin: 0 auto 24px auto;
 }
 
 .card__title-link {
@@ -8,9 +30,30 @@
 }
 
 .card__title {
+  margin: 0 0 4px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.card__description {
+  margin: 0 0 16px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.card__buy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__price {

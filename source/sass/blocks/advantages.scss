@@ -1,15 +1,113 @@
 .advantages {
-  padding: 50px 20px 60px 20px
+  padding: 50px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 30px 100px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px 40px;
+  }
+}
+
+.advantages__title {
+  margin-bottom: 4px;
+}
+
+.advantages__subtitle {
+  margin-bottom: 36px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+}
+
+.advantages__item {
+  margin-bottom: 32px;
+  padding-top: 66px;
+
+  &--speed {
+    background-image: url("../img/background-images/advantages-speed.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--convenience {
+    background-image: url("../img/background-images/advantages-convenience.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--cheerfulness {
+    background-image: url("../img/background-images/advantages-cheerfulness.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--eco {
+    background-image: url("../img/background-images/advantages-eco.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    padding-left: 0;
+  }
 }
 
 .advantages__name {
+  margin: 0 0 4px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    line-height: 36px;
+
+  }
+}
+
+.advantages__description {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

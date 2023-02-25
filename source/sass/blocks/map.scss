@@ -1,0 +1,25 @@
+.map__image-wrapper {
+  @media (min-width: $desktop-width) {
+    width: auto;
+    height: 540px;
+  }
+}
+
+.map__image {
+  margin: 0 auto;
+  display: block;
+  width: 320px;
+  height: 420px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    max-width: 1440px;
+    height: 540px;
+    object-fit: cover;
+  }
+}

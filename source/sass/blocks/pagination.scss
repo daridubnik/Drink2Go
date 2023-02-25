@@ -1,14 +1,44 @@
+.pagination {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 46%;
+    width: 395px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 58%;
+  }
+
+  @media (min-width: $desktop-width-max) {
+    margin: 0 0 0 62%;
+  }
+}
+
+.pagination__list {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .pagination__item {
+  padding: 0;
   background-color: inherit;
 }
 
-.pagination__link {
+.pagination__link,
+.pagination__button {
   padding: 8px;
   width: 40px;
   height: 40px;
   text-align: center;
   display: block;
   color: $color-base-primary;
+  text-decoration: none;
   background-color: $color-base-white;
   border-radius: 4px;
 
@@ -38,5 +68,25 @@
     &:disabled {
       color: $color-base-black;
     }
+  }
+}
+
+.pagination__button {
+  @media (min-width: $tablet-width) {
+    width: 91px;
+  }
+}
+
+.pagination__button-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__arrow {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

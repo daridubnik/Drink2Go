@@ -1,3 +1,7 @@
+.promo__wrapper {
+  position: relative;
+}
+
 .promo__list {
   margin: 0;
   padding: 0;
@@ -7,24 +11,89 @@
 .promo__item {
   &--slide-1 {
     background-color: $color-flat-white;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient($color-flat-white 77%, $color-base-white 77%, $color-base-white 23%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: $color-flat-white;
+    }
   }
 
   &--slide-2 {
     background-color: $color-lavender-latte;
     display: none;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient($color-lavender-latte 77%, $color-base-white 77%, $color-base-white 23%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: $color-lavender-latte;
+    }
   }
 
   &--slide-3 {
     background-color: $color-espresso;
     display: none;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient($color-espresso 77%, $color-base-white 77%, $color-base-white 23%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: $color-espresso;
+    }
   }
 }
 
 .promo__slider-wrapper {
-  padding: 20px 20px 60px 20px
+  padding: 20px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 80px 0 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 80px 60px 80px;
+    flex-direction: row;
+  }
+}
+
+.promo__image {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.promo__description-wrapper {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    padding: 150px 0 158px 30px;
+    text-align: left;
+  }
 }
 
 .promo__new {
+  margin: 0 0 4px 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -33,12 +102,46 @@
 }
 
 .promo__title {
+  margin: 0 0 10px 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 16px 0;
+  }
+}
+
+.promo__description {
+  margin: 0 0 20px 0;
+  max-width: 608px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 625px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.promo__buy_wrapper {
+  margin: 0 auto;
+  display: flex;
+  width: 230px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 20px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .promo__old-price {
+  margin-right: 6px;
   font-size: 16px;
   line-height: 32px;
   text-decoration: line-through;
@@ -46,6 +149,7 @@
 }
 
 .promo__new-price {
+  margin-right: 20px;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
@@ -57,6 +161,89 @@
   line-height: 24px;
 }
 
-.promo__toggle-button {
+.promo__switch-button {
+  margin: 0;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  color: $color-base-primary;
+
+  @media (min-width: $tablet-width) {
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+
+  &--prew {
+    left: 0;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(to right, $color-base-white, $color-white-opacity-zero);
+    }
+
+    &:active {
+      background: linear-gradient(to right, $color-primary-opacity, $color-primary-opacity-zero);
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(to left, $color-base-white, $color-white-opacity-zero);
+    }
+
+    &:active {
+      background: linear-gradient(to left, $color-primary-opacity, $color-primary-opacity-zero);
+    }
+
+    &:disabled {
+      color: $color-base-grey;
+      background: inherit;
+    }
+  }
+}
+
+.promo__toggle {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    position: absolute;
+    top: 630px;
+    left: 619px;
+  }
+}
+
+.promo__toggle-button {
+  @media (min-width: $desktop-width) {
+    width: 62px;
+    height: 4px;
+    background-color: $color-base-white;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary-opacity;
+    }
+
+    &:active {
+      background-color: $color-base-primary;
+    }
+
+    &--current {
+      background-color: $color-base-primary;
+    }
+  }
 }

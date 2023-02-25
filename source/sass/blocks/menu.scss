@@ -1,54 +1,105 @@
 .menu {
-  display: flex;
-  align-items: center;
+  padding: 0 40px 0 0;
+  position: relative;
+}
+
+.menu__navigation--closed .menu__list {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.menu__navigation--opened .menu__list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 61px;
+    right: -20px;
+    z-index: 2;
+    width: 100vw;
+  }
 }
 
 .menu__toggle {
-  padding: 22px 2px 22px 22px;
-  order: 2;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  padding: 30px 38px 30px 22px;
   background-color: $color-base-white;
+  border: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-.menu__navigation {
-  display: none;
+.menu__navigation--closed .menu__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/control/menu-burger.svg");
+  background-color: $color-base-white;
+  background-repeat: no-repeat;
+  top: 22px;
+  right: 22px;
+  width: 16px;
+  height: 16px;
+}
 
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
+.menu__navigation--opened .menu__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/control/menu-close.svg");
+  background-color: $color-base-white;
+  background-repeat: no-repeat;
+  top: 22px;
+  right: 22px;
+  width: 16px;
+  height: 16px;
 }
 
 .menu__user-list {
   display: flex;
-  flex-direction: row;
 }
 
 .menu__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-color: $color-base-white;
 
   @media (min-width: $tablet-width) {
     display: flex;
   }
 }
 
+.menu__item {
+  &:last-child {
+    @media (max-width: $mobile-width-only) {
+      border-bottom: 1px solid $color-base-secondary;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $color-base-secondary;
+  }
+}
+
 .menu__link {
-  text-decoration: none;
-  color: $color-base-black;
+  padding: 20px;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
+  text-decoration: none;
+  color: $color-base-black;
+  text-align: center;
+  display: block;
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px;
   }
 
   &--user-list {
-    padding: 22px;
+    padding: 22px 22px 19px 22px;
 
     @media (min-width: $tablet-width) {
       padding: 32px 22px;

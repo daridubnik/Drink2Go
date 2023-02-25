@@ -22,7 +22,7 @@
       background-color: $color-primary-darker;
     }
 
-    &:default {
+    &:disabled {
       background-color: $color-base-grey;
     }
   }
@@ -43,7 +43,7 @@
     background-color: $color-primary-darker;
   }
 
-  &:default {
+  &:disabled {
     color: $color-base-white;
     background-color: $color-base-grey;
   }

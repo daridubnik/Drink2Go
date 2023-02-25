@@ -5,6 +5,18 @@
   align-items: center;
 }
 
+.header__identity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__logo {
+  @media (min-width: $desktop-width) {
+    margin: 0 20px 0 0;
+  }
+}
+
 .header__logo-image {
   padding: 2px 0 0 0;
   width: 32px;
@@ -19,15 +31,11 @@
   }
 }
 
-.header__identity {
-  display: flex;
-  flex-direction: row;
-}
-
 .header__description {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin: 0;
   }
 }

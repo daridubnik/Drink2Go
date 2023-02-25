@@ -15,16 +15,17 @@
 }
 
 .form__group {
-  margin: 0;
-  padding: 0 0 25px 0;
+  margin: 0 0 25px 0;
+  padding: 0;
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding: 0 21px 0 0;
+    margin: 0 21px 0 0;
   }
 
   &--sorting {
     margin: 0 0 16px 0;
+    position: relative;
 
     @media (min-width: $tablet-width) {
       margin: 0 0 30px 0;
@@ -39,6 +40,7 @@
 }
 
 .form__title {
+  margin: 0 0 22px 0;
   padding: 0;
   font-weight: 600;
   font-size: 16px;
@@ -51,9 +53,122 @@
   list-style-type: none;
 }
 
+.form__item {
+  margin: 0 0 21px 0;
+}
+
 .form__poin-name {
   font-size: 16px;
   line-height: 24px;
+}
+
+.range__scale {
+  position: relative;
+  margin: 0 0 35px 0;
+  width: 280px;
+  height: 2px;
+  background-color: $color-light-grey;
+}
+
+.range__bar {
+  position: absolute;
+  margin: -1px 0 0 0;
+  height: 4px;
+  background-color: $color-primary-lighter;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $color-base-white;
+  border: 2px solid $color-primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-opacity;
+    box-shadow: inset 0 0 0 2px $color-base-white;
+  }
+
+  &:active {
+    background-color: $color-base-primary;
+    box-shadow: inset 0 0 0 2px $color-base-white;
+  }
+
+  &--min {
+    top: -8px;
+    left: -20px;
+  }
+
+  &--max {
+    top: -8px;
+    left: 229px;
+  }
+}
+
+.form__range-inputs-wrapper {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-base-grey;
+}
+
+.form__range-input {
+  padding: 7px 10px;
+  width: 118px;
+  font: inherit;
+  color: $color-base-grey;
+  text-align: center;
+  background-color: $color-base-white;
+  border: 2px solid $color-primary-lighter;
+  border-radius: 4px;
+}
+
+.form__label {
+  position: relative;
+  display: block;
+
+  &--radio {
+    padding: 0 0 0 34px;
+  }
+
+  &--checkbox {
+    padding: 0 0 0 54px;
+  }
+}
+
+.form__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  border: 2px solid $color-base-grey;
+
+  &--radio {
+    width: 24px;
+    border-radius: 50%;
+    background-color: $color-base-white;
+  }
+
+  &--checkbox {
+    width: 42px;
+    border-radius: 12px;
+    background-color: $color-base-grey;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $color-base-white;
+      border-radius: 50%;
+    }
+  }
 }
 
 .form__buttons-wrapper {
@@ -77,7 +192,7 @@
 
   &--primary {
     margin: 0 0 25px 0;
-    padding: 11px 15px;
+    padding: 10px 14px;
     font-size: 13px;
 
     @media (min-width: $tablet-width) {
@@ -92,7 +207,7 @@
   }
 
   &--secondary {
-    padding: 11px 17px;
+    padding: 10px 15px;
     font-size: 14px;
 
     @media (min-width: $tablet-width) {
@@ -107,4 +222,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $color-base-primary;
+  position: absolute;
+  top: -45px;
+  left: 116px;
 }

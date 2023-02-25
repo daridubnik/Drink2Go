@@ -64,6 +64,10 @@
   }
 }
 
+.promo__image-wrapper {
+  margin: 0 0 10px 0;
+}
+
 .promo__image {
   display: block;
 
@@ -98,6 +102,7 @@
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  letter-spacing: 1.4px;
   color: $color-base-primary;
 }
 
@@ -106,6 +111,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
+  letter-spacing: 1.2px;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 16px 0;
@@ -149,7 +155,7 @@
 }
 
 .promo__new-price {
-  margin-right: 20px;
+  margin-right: 28px;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;

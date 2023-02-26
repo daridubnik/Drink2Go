@@ -5,6 +5,12 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     display: flex;
+    min-width: 579px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width-max) {
+    min-width: 882px;
   }
 }
 
@@ -70,10 +76,6 @@
 
 .menu__user-list {
   display: flex;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 0 58px;
-  }
 }
 
 .menu__list {
@@ -84,13 +86,23 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
   }
 }
 
 .menu__item {
+  @media (min-width: $desktop-width-max) {
+    margin: 0 20px 0 0;
+  }
+
   &:last-child {
     @media (max-width: $mobile-width-only) {
       border-bottom: 1px solid $color-base-secondary;
+    }
+
+    @media (min-width: $desktop-width-max) {
+      margin: 0;
     }
   }
 
@@ -114,7 +126,6 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $color-base-black;
-  letter-spacing: 1.2px;
   text-align: center;
   display: block;
 
@@ -126,7 +137,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 32px 20px;
+    padding: 31px 20px;
 
     &:hover,
     &:focus {

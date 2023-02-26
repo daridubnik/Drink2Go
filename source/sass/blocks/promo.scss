@@ -224,7 +224,7 @@
 .promo__toggle {
   display: none;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width-max) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;

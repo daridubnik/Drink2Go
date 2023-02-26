@@ -11,6 +11,10 @@
   }
 }
 
+.catalog__subtitle {
+  margin-bottom: 21px;
+}
+
 .catalog__content {
   @media (min-width: $desktop-width-max) {
     display: grid;

@@ -13,9 +13,9 @@
     <div class="header__identity">
       <a class="header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1024px)" srcset="./img/logo/logo-header-desktop.svg" />
-          <source media="(min-width: 768px)" srcset="./img/logo/logo-header-tablet.svg" />
-          <img class="header__logo-image" src="./img/logo/logo-header-mobile.svg" width="32" height="36"
+          <source media="(min-width: 1024px)" srcset="./img/logo/logo-full.svg" />
+          <source media="(min-width: 768px)" srcset="./img/logo/logo-short.svg" />
+          <img class="header__logo-image" src="./img/logo/logo-symbol.svg" width="32" height="36"
             alt="Логотип Drink2Go." />
         </picture>
       </a>
@@ -230,10 +230,10 @@
             <div class="form__wrapper">
               <div class="form__filters-wrapper">
                 <fieldset class="form__group">
-                  <legend class="form__title">Цена</legend>
+                  <legend class="form__title form__title--range">Цена</legend>
                   <div class="form__range range">
                     <div class="range__scale">
-                      <div class="range__bar" style="left: 20px; width: 230px">
+                      <div class="range__bar">
                         <button class="range__toggle range__toggle--min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
@@ -253,8 +253,8 @@
                     </label>
                   </div>
                 </fieldset>
-                <fieldset class="form__group">
-                  <legend class="form__title">Наличие молока</legend>
+                <fieldset class="form__group form__group--radio">
+                  <legend class="form__title  form__title--radio">Наличие молока</legend>
                   <ul class="form__list">
                     <li class="form__item">
                       <label class="form__label form__label--radio">
@@ -288,8 +288,8 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset class="form__group">
-                  <legend class="form__title">Страна произрастания</legend>
+                <fieldset class="form__group form__group--checkbox">
+                  <legend class="form__title form__title--checkbox">Страна произрастания</legend>
                   <ul class="form__list">
                     <li class="form__item">
                       <label class="form__label form__label--checkbox">
@@ -338,7 +338,7 @@
                 <button class="form__button form__button--secondary button button--secondary">Сбросить фильтр</button>
               </div>
               <fieldset class="form__group form__group--sorting">
-                <legend class="form__title">Сортировка:</legend>
+                <legend class="form__title form__title--sorting">Сортировка:</legend>
                 <select class="form__sorting" aria-label="Сортировка">
                   <option value="default">по умолчанию</option>
                   <option value="expensive-first">сначала дорогие</option>
@@ -509,8 +509,11 @@
   <footer class="footer container">
     <div class="footer__about-us-wrapper">
       <div class="footer__image">
-        <img class="footer__logo-image" src="./img/logo/logo-footer.svg" width="82" height="36"
-          alt="Логотип Drink2Go." />
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/logo/logo-full.svg">
+          <img class="footer__logo-image" src="./img/logo/logo-short.svg" width="82" height="36"
+            alt="Логотип Drink2Go." />
+        </picture>
       </div>
       <p class="footer__description">
         Интернет-магазин кофейных напитков

@@ -59,7 +59,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 80px 60px 80px;
+    padding: 30px 80px 75px 105px;
     flex-direction: row;
   }
 }
@@ -91,7 +91,7 @@
 
   @media (min-width: $desktop-width) {
     order: 0;
-    padding: 150px 0 158px 30px;
+    padding: 142px 0 158px 30px;
     text-align: left;
   }
 }
@@ -229,7 +229,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;
     position: absolute;
-    top: 630px;
+    top: 640px;
     left: 619px;
   }
 }

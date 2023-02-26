@@ -21,7 +21,11 @@
 }
 
 .card__image-link {
-  margin: 0 auto 24px auto;
+  margin: 0 auto 19px auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 25px auto;
+  }
 }
 
 .card__title-link {
@@ -57,6 +61,7 @@
 }
 
 .card__price {
+  padding: 2px 0 0 0;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;

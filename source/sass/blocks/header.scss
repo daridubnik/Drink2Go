@@ -37,7 +37,7 @@
 .header__description {
   display: none;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width-max) {
     display: block;
     margin: 0;
     font-size: 12px;

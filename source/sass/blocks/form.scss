@@ -229,11 +229,25 @@
   padding: 7px 10px;
   width: 118px;
   font: inherit;
-  color: $color-base-grey;
+  color: $color-base-black;
   text-align: center;
   background-color: $color-base-white;
   border: 2px solid $color-primary-lighter;
   border-radius: 4px;
+
+  &:hover {
+    border: 2px solid $color-base-primary;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid $color-primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px solid $color-base-grey;
+  }
 
   @media (min-width: $tablet-width) {
     width: 93px;
@@ -286,6 +300,70 @@
       border-radius: 50%;
     }
   }
+}
+
+.form__label:hover .form__control-mark,
+.form__label:focus .form__control-mark {
+  background-color: $color-primary-opacity;
+  border: 2px solid $color-primary-lighter;
+}
+
+.form__label:hover .form__control-mark--radio {
+  box-shadow: inset 0 0 0 2px $color-base-white;
+}
+
+.form__control-input[type="radio"]:checked + .form__control-mark--radio {
+  background-color: $color-base-primary;
+  box-shadow: inset 0 0 0 2px $color-base-white;
+  border: 2px solid $color-base-primary;
+}
+
+.form__control-input[type="checkbox"]:checked + .form__control-mark--checkbox {
+  background-color: $color-base-primary;
+  border: 2px solid $color-base-primary;
+}
+
+.form__control-input[type="checkbox"]:checked + .form__control-mark--checkbox::before {
+  display: none;
+}
+
+.form__control-input[type="checkbox"]:checked  + .form__control-mark--checkbox:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $color-base-white;
+  border-radius: 50%;
+}
+
+.form__control-input[type="radio"]:disabled + .form__control-mark {
+  border: 2px solid $color-light-grey;
+  background-color: $color-lightest-grey;
+}
+
+.form__control-input[type="radio"]:checked:disabled + .form__control-mark {
+  border: 2px solid $color-light-grey;
+  background-color: $color-light-grey;
+}
+
+.form__control-input[type="checkbox"]:disabled + .form__control-mark {
+  border: 2px solid $color-light-grey;
+  background-color: $color-light-grey;
+}
+
+.form__control-input[type="checkbox"]:checked:disabled + .form__control-mark {
+  border: 2px solid $color-light-grey;
+  background-color: $color-light-grey;
+}
+
+.form__control-input[type="checkbox"]:checked:disabled + .form__control-mark--checkbox::before {
+  display: none;
+}
+
+.form__control-input[type="checkbox"]:checked:disabled + .form__control-mark--checkbox::after {
+  background-color: $color-base-grey;
 }
 
 .form__buttons-wrapper {

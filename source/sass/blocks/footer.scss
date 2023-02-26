@@ -171,6 +171,15 @@
   line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-lighter;
+  }
+
+  &:active {
+    color: $color-primary-darker;
+  }
 }
 
 .footer__address {

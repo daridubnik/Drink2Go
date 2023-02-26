@@ -22,7 +22,7 @@
       <p class="header__description">Интернет-магазин <br> кофейных напитков</p>
     </div>
     <div class="header__menu menu">
-      <nav class="menu__navigation menu__navigation--closed">
+      <nav class="menu__navigation menu__navigation--opened">
         <button class="menu__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
@@ -244,11 +244,11 @@
                   </div>
                   <div class="form__range-inputs-wrapper">
                     <label class="form__label">
-                      <input class="form__range-input" type="number" value="0" name="min-price">
+                      <input class="form__range-input" type="number" placeholder="0" name="min-price">
                     </label>
                     -
                     <label class="form__label">
-                      <input class="form__range-input" type="number" value="900" name="max-price">
+                      <input class="form__range-input" type="number" placeholder="900" name="max-price">
                     </label>
                   </div>
                 </fieldset>
@@ -257,7 +257,7 @@
                   <ul class="form__list">
                     <li class="form__item">
                       <label class="form__label form__label--radio">
-                        <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-matter"
+                        <input $color-light-grey class="visually-hidden form__control-input" type="radio" name="milk" value="no-matter"
                           checked>
                         <span class="form__control-mark form__control-mark--radio"></span>
                         <span class="form__poin-name">Неважно</span>
